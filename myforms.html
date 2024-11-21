@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  <h1 id="title">
+    How Do You See The World?
+  </h1>
+  <p id="description">
+    Proceed in giving us feedback
+  </p>
+
+ <form id="survey-form" action="http://localhost:3000/submit" method="POST">
+
+
+  <div class="first-table">
+    <fieldset>
+    <label for="scale">
+      On a scale of 1-10, how optimistic are you about the future of the world?
+      <input type="range" id="scale" name="scale" min="1" max="10" oninput="ratingValue.textContent = this.value">
+    </label>
+    <p>Your rating: <span id="ratingValue">5</span></p>
+    </fieldset>
+    <fieldset>
+      <label for="View">Which of the following best describes your currrent view of the world?</label>
+      <label for="positive"><input type="radio" name="option1" checked>Mostly positive</label>
+      <label for="negative"><input type="radio" name="option1">Mostly negative</label>
+      <label for="neutral"><input type="radio" name="option1">Neutral</label>
+      <label for="feelings"><input type="radio" name="option1">Mixed feelings</label>
+    </fieldset>
+    <fieldset>
+      <label for="issues">What are the top 3 issues you think the world is currently facing? (Choose up to 3)</label>
+      <label for="climate"><input type="checkbox" name="option2">Climate change</label>
+      <label for="economic"><input type="checkbox" name="option2">Economic instability</label>
+      <label for="political"><input type="checkbox" name="option2">Political conflict</label>
+      <label for="health"><input type="checkbox" name="option2">Health crises</label>
+      <label for="social"><input type="checkbox" name="option2">Social inequality</label>
+      <label for="technology"><input type="checkbox" name="option2">Technology and privacy issues</label>
+      <label for="other"><input type="checkbox" >Other <br>
+      <textarea></textarea>
+      </label>
+    </fieldset>
+  </div>
+
+  <div class="second-table">
+    <fieldset>
+      <label for="Feel">How often do you feel hopeful about the future</label>
+      <label for="often"><input type="radio" name="option3" checked>Often</label>
+      <label for="sometimes"><input type="radio" name="option3">sometimes</label>
+      <label for="rarely"><input type="radio" name="option3">Rarely</label>
+      <label for="never"><input type="radio" name="option3">Never</label>
+    </fieldset>
+    <fieldset>
+      <label for="Opinion">In your opinion, how much do world events impact your personal well-being?</label>
+      <label for="greatly"><input type="radio" name="option5">Greatly</label>
+      <label for="somewhat"><input type="radio" name="option5">Somewhat</label>
+      <label for="minimally"><input type="radio" name="option5">Minimally</label>
+      <label for="not_at_all"><input type="radio" name="option5">Not at all</label>
+    </fieldset>
+    <fieldset>
+      <label for="Becomingn">Do you feel that communities and societies are generally becoming:</label>
+      <label for="connected"><input type="radio">More connected</label>
+      <label for="divided"><input type="radio">More divided</label>
+      <label for="same"><input type="radio">Staying the same</label>
+      <label for="unsure"><input type="radio">Unsure</label>
+    </fieldset>
+  </div>
+
+  <div class="third-table">
+    <fieldset>
+      <legend>Personal Informatin</legend>
+      <label for="region">Which region are you from ?</label>
+      <select name="region" id="region">
+        <option value="">Select One </option>
+        <option value="1">Greater Accra</option>
+        <option value="2">Ashanti</option>
+        <option value="3">Easten</option>
+      </select>
+      <label id="name" for="first_name">Enter Your First Name: <input type="text" required></label>
+      <label id="name"for="last_name">Enter Your Last Name: <input type="text" required></label>
+      <label id="email" for="email">Enter Your Email: <input type="email" required></label>
+      <label id="number" for="phone_number">Phone Number: <input type="tel" placeholder="" pattern="[\+]\d{1,3}[ ]?\d{1,3}[ ]?\d{3}[ ]?\d{4}" required></label>
+    </fieldset>
+  </div>
+
+  <input type="submit"  value="submit">
+ </form>
+  </body>

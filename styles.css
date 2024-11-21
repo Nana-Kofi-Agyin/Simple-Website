@@ -1,0 +1,56 @@
+body {
+  background-color:  #004e92;
+  color: aliceblue;
+  font-size: 18px;
+}
+h1 {
+  font-family: Algerian;
+  color: blue;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  align-self: center; 
+  text-decoration: underline;
+  background-image: url(Earth.jpg);
+}
+
+p {
+  font-family: Tahoma;
+  text-align: center;
+  border-color: aliceblue;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+fieldset {
+  border: none;
+  padding: 1rem 0;
+  
+}
+
+fieldset:first-of-type {
+  border-top: 3px solid #3b3b4f;
+}
+
+.first-table, .second-table, .third-table {
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid #add8e6;
+  border-radius: 20px;
+  background-color: #1b1b32;
+}
+
+input[type="submit"] {
+  margin: 20px;
+  width: 90%;
+  padding: 20px;
+  color: whitesmoke;
+  border: 10px solid #add8e6;
+  border-radius: 40px;
+  background-color: #1b1b32;
+  
+}
